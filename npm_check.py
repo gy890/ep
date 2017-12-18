@@ -5,7 +5,7 @@ Created on 2017-07-17
 @Filename: npm_check
 @Author: Gui
 
-报价调整，做需求6，7
+
 """
 import requests
 

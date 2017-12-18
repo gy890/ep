@@ -1,0 +1,124 @@
+2017-12-18 18:21:47,201 - sLogger - INFO - ('http://dev.e-ports.com/api/', 'gui.yun@e-ports.com', 'password')
+2017-12-18 18:21:47,496 - sLogger - INFO - user[gui.yun@e-ports.com] role[consigner], total 14 orders
+2017-12-18 18:21:47,496 - sLogger - INFO - No.1 orderNumber=EP0120171212100222910
+2017-12-18 18:21:47,838 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:47,838 - sLogger - INFO - No.2 orderNumber=EP0820171212091909389
+2017-12-18 18:21:48,059 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:48,060 - sLogger - INFO - No.3 orderNumber=EP0820171208110816904
+2017-12-18 18:21:48,459 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:48,459 - sLogger - INFO - No.4 orderNumber=EP0920171201031822630
+2017-12-18 18:21:48,866 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:48,866 - sLogger - INFO - No.5 orderNumber=EP0120171130093643218
+2017-12-18 18:21:49,034 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:49,035 - sLogger - INFO - No.6 orderNumber=EP1120171130092855430
+2017-12-18 18:21:49,343 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:49,344 - sLogger - INFO - No.7 orderNumber=EP0820171130083334223
+2017-12-18 18:21:49,702 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:21:49,702 - sLogger - INFO - No.8 orderNumber=EP0620171130082019879
+2017-12-18 18:21:49,856 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:21:49,857 - sLogger - INFO - No.9 orderNumber=EP0420171130081728354
+2017-12-18 18:21:50,028 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:50,029 - sLogger - INFO - No.10 orderNumber=EP0420171130074537187
+2017-12-18 18:21:50,215 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:50,216 - sLogger - INFO - No.11 orderNumber=EP0120171130072731712
+2017-12-18 18:21:50,418 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1e7b1874cbb20700f17c67', 'orgAgentTest.20171129004.d')
+2017-12-18 18:21:50,418 - sLogger - INFO - No.12 orderNumber=EP0820171130062842879
+2017-12-18 18:21:50,595 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:50,595 - sLogger - INFO - No.13 orderNumber=EP0620171128025617425
+2017-12-18 18:21:50,790 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:21:50,791 - sLogger - INFO - No.14 orderNumber=EP0020171128023652290
+2017-12-18 18:21:50,950 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:45,281 - sLogger - INFO - ('http://dev.e-ports.com/api/', 'gui.yun@e-ports.com', 'password')
+2017-12-18 18:23:45,509 - sLogger - INFO - user[gui.yun@e-ports.com] role[consigner], total 14 orders
+2017-12-18 18:23:45,509 - sLogger - INFO - No.1 orderNumber=EP0120171212100222910
+2017-12-18 18:23:45,922 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:45,922 - sLogger - INFO - No.2 orderNumber=EP0820171212091909389
+2017-12-18 18:23:46,256 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:46,256 - sLogger - INFO - No.3 orderNumber=EP0820171208110816904
+2017-12-18 18:23:46,672 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:46,672 - sLogger - INFO - No.4 orderNumber=EP0920171201031822630
+2017-12-18 18:23:47,069 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:47,069 - sLogger - INFO - No.5 orderNumber=EP0120171130093643218
+2017-12-18 18:23:47,276 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:47,276 - sLogger - INFO - No.6 orderNumber=EP1120171130092855430
+2017-12-18 18:23:47,598 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:47,598 - sLogger - INFO - No.7 orderNumber=EP0820171130083334223
+2017-12-18 18:23:47,952 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:23:47,952 - sLogger - INFO - No.8 orderNumber=EP0620171130082019879
+2017-12-18 18:23:48,121 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:23:48,121 - sLogger - INFO - No.9 orderNumber=EP0420171130081728354
+2017-12-18 18:23:48,307 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:48,307 - sLogger - INFO - No.10 orderNumber=EP0420171130074537187
+2017-12-18 18:23:48,487 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:48,488 - sLogger - INFO - No.11 orderNumber=EP0120171130072731712
+2017-12-18 18:23:48,693 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1e7b1874cbb20700f17c67', 'orgAgentTest.20171129004.d')
+2017-12-18 18:23:48,694 - sLogger - INFO - No.12 orderNumber=EP0820171130062842879
+2017-12-18 18:23:48,883 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:48,884 - sLogger - INFO - No.13 orderNumber=EP0620171128025617425
+2017-12-18 18:23:49,116 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:23:49,116 - sLogger - INFO - No.14 orderNumber=EP0020171128023652290
+2017-12-18 18:23:49,283 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:18,886 - sLogger - INFO - Start at Mon Dec 18 18:25:18 2017
+2017-12-18 18:25:18,912 - sLogger - INFO - ('http://dev.e-ports.com/api/', 'gui.yun@e-ports.com', 'password')
+2017-12-18 18:25:19,174 - sLogger - INFO - user[gui.yun@e-ports.com] role[consigner], total 14 orders
+2017-12-18 18:25:19,174 - sLogger - INFO - No.1 orderNumber=EP0120171212100222910
+2017-12-18 18:25:19,502 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:19,502 - sLogger - INFO - No.2 orderNumber=EP0820171212091909389
+2017-12-18 18:25:19,734 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:19,734 - sLogger - INFO - No.3 orderNumber=EP0820171208110816904
+2017-12-18 18:25:20,172 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:20,172 - sLogger - INFO - No.4 orderNumber=EP0920171201031822630
+2017-12-18 18:25:20,538 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:20,538 - sLogger - INFO - No.5 orderNumber=EP0120171130093643218
+2017-12-18 18:25:20,716 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:20,716 - sLogger - INFO - No.6 orderNumber=EP1120171130092855430
+2017-12-18 18:25:21,051 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:21,051 - sLogger - INFO - No.7 orderNumber=EP0820171130083334223
+2017-12-18 18:25:21,444 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:25:21,444 - sLogger - INFO - No.8 orderNumber=EP0620171130082019879
+2017-12-18 18:25:21,589 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:25:21,590 - sLogger - INFO - No.9 orderNumber=EP0420171130081728354
+2017-12-18 18:25:21,771 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:21,772 - sLogger - INFO - No.10 orderNumber=EP0420171130074537187
+2017-12-18 18:25:21,963 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:21,964 - sLogger - INFO - No.11 orderNumber=EP0120171130072731712
+2017-12-18 18:25:22,115 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1e7b1874cbb20700f17c67', 'orgAgentTest.20171129004.d')
+2017-12-18 18:25:22,115 - sLogger - INFO - No.12 orderNumber=EP0820171130062842879
+2017-12-18 18:25:22,289 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:22,289 - sLogger - INFO - No.13 orderNumber=EP0620171128025617425
+2017-12-18 18:25:22,489 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:22,489 - sLogger - INFO - No.14 orderNumber=EP0020171128023652290
+2017-12-18 18:25:22,640 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:25:22,641 - sLogger - INFO - End at Mon Dec 18 18:25:22 2017
+2017-12-18 18:26:12,155 - sLogger - INFO - Start at Mon Dec 18 18:26:12 2017
+2017-12-18 18:26:12,181 - sLogger - INFO - ('http://dev.e-ports.com/api/', 'gui.yun@e-ports.com', 'password')
+2017-12-18 18:26:12,465 - sLogger - INFO - user[gui.yun@e-ports.com] role[consigner], total 14 orders
+2017-12-18 18:26:12,465 - sLogger - INFO - No.1 orderNumber=EP0120171212100222910
+2017-12-18 18:26:12,835 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:12,835 - sLogger - INFO - No.2 orderNumber=EP0820171212091909389
+2017-12-18 18:26:13,034 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:13,034 - sLogger - INFO - No.3 orderNumber=EP0820171208110816904
+2017-12-18 18:26:13,480 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:13,480 - sLogger - INFO - No.4 orderNumber=EP0920171201031822630
+2017-12-18 18:26:13,847 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:13,847 - sLogger - INFO - No.5 orderNumber=EP0120171130093643218
+2017-12-18 18:26:14,054 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:14,055 - sLogger - INFO - No.6 orderNumber=EP1120171130092855430
+2017-12-18 18:26:14,428 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:14,428 - sLogger - INFO - No.7 orderNumber=EP0820171130083334223
+2017-12-18 18:26:14,800 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:26:14,801 - sLogger - INFO - No.8 orderNumber=EP0620171130082019879
+2017-12-18 18:26:14,978 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1fbcf58f993b09004d7fba', "备用测试代理，a'b'c")
+2017-12-18 18:26:14,978 - sLogger - INFO - No.9 orderNumber=EP0420171130081728354
+2017-12-18 18:26:15,147 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:15,147 - sLogger - INFO - No.10 orderNumber=EP0420171130074537187
+2017-12-18 18:26:15,339 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:15,340 - sLogger - INFO - No.11 orderNumber=EP0120171130072731712
+2017-12-18 18:26:15,508 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1e7b1874cbb20700f17c67', 'orgAgentTest.20171129004.d')
+2017-12-18 18:26:15,509 - sLogger - INFO - No.12 orderNumber=EP0820171130062842879
+2017-12-18 18:26:15,709 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:15,709 - sLogger - INFO - No.13 orderNumber=EP0620171128025617425
+2017-12-18 18:26:16,014 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:16,014 - sLogger - INFO - No.14 orderNumber=EP0020171128023652290
+2017-12-18 18:26:16,187 - sLogger - INFO - consigner --> ('5a1bce0899c71b0900f9665a', 'orgOwnerTest.20171117001.a'), consignee --> ('5a1bd30999c71b0900f9665b', 'orgAgentTest.20171127002.b')
+2017-12-18 18:26:16,187 - sLogger - INFO - End at Mon Dec 18 18:26:16 2017
