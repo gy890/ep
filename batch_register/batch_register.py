@@ -9,7 +9,7 @@ Created on 2017-12-12
 """
 import json
 import time
-from openpyxl import load_workbook, worksheet
+from openpyxl import load_workbook
 import requests
 
 
@@ -62,10 +62,8 @@ if __name__ == '__main__':
         user2 = ws.cell(row=i, column=8).value
         user3 = ws.cell(row=i, column=9).value
         user4 = ws.cell(row=i, column=10).value
-        # print(get_port_organization(port, user1, user2, user3, user4))
         organizations.extend(get_port_organization(port, user1, user2, user3, user4))
     for i, (port, organization, username) in enumerate(organizations, 1):
         print(i, port, '-------', organization, '-------', username)
-        # print(username)
         print(enroll(port, organization, username))
         time.sleep(2)

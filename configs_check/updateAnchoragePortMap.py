@@ -7,7 +7,7 @@ Created on 2017-04-05
 
 update anchorage port_id
 """
-from .epMongo import EPMongo
+from epMongo import EPMongo
 
 
 def get_ports(epmongo):

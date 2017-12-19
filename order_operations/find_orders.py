@@ -8,13 +8,16 @@ Created on 2017-12-18
 
 """
 import json
-import logging
+import os
+import time
 import logging.config
 import requests
-import time
+from openpyxl import Workbook
+import timeit
 
 
-def get_account():
+@timeit.timeit
+def get_account(env='dev', n=0):
     """
     parse accounts.yml, get url, username, password.
     :return: url, username, password
@@ -27,13 +30,23 @@ def get_account():
     with open('accounts.yml') as f:
         config = f.read()
     config = load(config, Loader)
-    url = config['url']
-    accounts = config['accounts']
-    username = accounts[0]['username']
-    password = accounts[0]['password']
+    if env == 'dev':
+        url = config['dev']['url']
+        accounts = config['dev']['accounts']
+        username = accounts[n]['username']
+        password = accounts[n]['password']
+    elif env == 'portal':
+        url = config['portal']['url']
+        accounts = config['portal']['accounts']
+        username = accounts[n]['username']
+        password = accounts[n]['password']
+    else:
+        logger.error('No {} config!'.format(env))
+        raise Exception('No {} config!'.format(env))
     return url, username, password
 
 
+@timeit.timeit
 def get_cookie(url, username, password):
     """
     get login user cookie and role.
@@ -59,6 +72,7 @@ def get_cookie(url, username, password):
     return cookie, role
 
 
+@timeit.timeit
 def get_orders(url, cookie):
     """
     get login user orders.
@@ -87,6 +101,7 @@ def get_orders(url, cookie):
     return total, orders
 
 
+@timeit.timeit
 def find_order_by_id(url, order_id, cookie):
     """
     get order consigner and consignee.
@@ -113,17 +128,38 @@ def find_order_by_id(url, order_id, cookie):
 
 
 if __name__ == '__main__':
+    if os.path.exists('mylog.log'):
+        os.remove('mylog.log')
     logging.config.fileConfig('logging.conf', defaults={'logfilename': 'mylog.log'})
     logger = logging.getLogger('sLogger')
     logger.info('Start at {}'.format(time.asctime()))
-    url, username, password = get_account()
+    url, username, password = get_account('dev', 0)
+    wb = Workbook()
+    ws = wb.get_active_sheet()
+    ws.title = username
     logger.info((url, username, password))
+    ws['A1'] = username
     cookie, role = get_cookie(url, username, password)
+    ws['B1'] = role
     total, orders = get_orders(url, cookie)
+    ws['C1'] = total
     logger.info('user[{username}] role[{role}], total {total} orders'.format(username=username, role=role, total=total))
+    ws['A2'] = 'orderId'
+    ws['B2'] = 'orderNumber'
+    ws['C2'] = 'consignerId'
+    ws['D2'] = 'consignerName'
+    ws['E2'] = 'consigneeId'
+    ws['F2'] = 'consigneeName'
     for i, order in enumerate(orders, 1):
         logger.info('No.{i} orderNumber={orderNumber}'.format(i=i, orderNumber=order[1]))
+        ws.cell(row=i + 2, column=1).value = order[0]
+        ws.cell(row=i + 2, column=2).value = order[1]
         consigner, consignee = find_order_by_id(url, order[0], cookie)
         logger.info(
             'consigner --> {consigner}, consignee --> {consignee}'.format(consigner=consigner, consignee=consignee))
+        ws.cell(row=i + 2, column=3).value = consigner[0]
+        ws.cell(row=i + 2, column=4).value = consigner[1]
+        ws.cell(row=i + 2, column=5).value = consignee[0]
+        ws.cell(row=i + 2, column=6).value = consignee[1]
+    wb.save('orders.xlsx')
     logger.info('End at {}'.format(time.asctime()))

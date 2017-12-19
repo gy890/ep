@@ -1,4 +1,15 @@
-url: http://dev.e-ports.com/api/
-accounts:
-  - username: gui.yun@e-ports.com
-    password: password
+dev:
+  url: http://dev.e-ports.com/api/
+  accounts:
+    - username: gui.yun@e-ports.com
+      password: password
+
+portal:
+  url: https://portal.e-ports.com/api/
+  accounts:
+    - username: principal@e-ports.com
+      password: NZzAw8QB0Z
+    - username: qingdao@e-ports.com
+      password: QDSky123
+    - username: shanghai@e-ports.com
+      password: SHSky123
