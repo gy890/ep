@@ -132,6 +132,7 @@ if __name__ == '__main__':
         os.remove('mylog.log')
     logging.config.fileConfig('logging.conf', defaults={'logfilename': 'mylog.log'})
     logger = logging.getLogger('sLogger')
+    print('main', logger)
     logger.info('Start at {}'.format(time.asctime()))
     url, username, password = get_account('dev', 0)
     wb = Workbook()

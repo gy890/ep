@@ -10,7 +10,8 @@ Created on 2017-12-19
 import time
 import logging
 
-logger = logging.getLogger()
+logger = logging.getLogger('sLogger')
+print('timeit', logger)
 
 
 def timeit(func):
@@ -19,7 +20,7 @@ def timeit(func):
         result = func(*args, **kwargs)
         t2 = time.time()
         t = '%.3f' % (t2 - t1)
-        logging.debug('{} costs {} s.'.format(func.__name__, t))
+        logger.debug('{} costs {} s.'.format(func.__name__, t))
         return result
 
     return wrapped
