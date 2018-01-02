@@ -99,12 +99,14 @@ def clear_user_by_username(ep, username, level):
 def get_user_by_username(ep, username, level):
     utils.line()
     print(SPACE * level + 'Get user={user}'.format(user=username))
-    print(ep.get_doc_by_query('users', {'username': username}))
-    position_id = ep.get_doc_by_query('users', {'username': username}).get('position')
+    print(ep.get_doc_by_query('users', {'username': {'$regex': '^'+username+'$', '$options': 'i'}}))
+    position_id = ep.get_doc_by_query('users', {'username': {'$regex': '^'+username+'$', '$options': 'i'}}).get('position')
     group_id = ep.get_doc_by_query('userpositions', {'_id': position_id}).get('group')
     account_id = ep.get_doc_by_query('usergroups', {'_id': group_id}).get('account')
     organization_id = ep.get_doc_by_query('accounts', {'_id': account_id}).get('organization')
-    print('position_id={position_id}, group_id={group_id}, account_id={account_id}, organization={organization_id}'.format(position_id=position_id, group_id=group_id, account_id=account_id, organization_id=organization_id))
+    print(
+        'position_id={position_id}, group_id={group_id}, account_id={account_id}, organization={organization_id}'.format(
+            position_id=position_id, group_id=group_id, account_id=account_id, organization_id=organization_id))
 
 
 def get_users_by_account_id(ep, account_id, level):
@@ -133,10 +135,12 @@ def get_users_by_account_id(ep, account_id, level):
             user_id = user.get('_id')
             isSuperAdmin = user.get('isSuperAdmin')
             users.append((user_id, username, date_delete, isSuperAdmin, position_id, group_id, group_flag, user_group))
-    for i, (user_id, username, date_delete, isSuperAdmin, position_id, group_id, group_flag, user_group) in enumerate(users, 1):
+    for i, (user_id, username, date_delete, isSuperAdmin, position_id, group_id, group_flag, user_group) in enumerate(
+            users, 1):
         print(
             '{i} {user_id}, dateDelete={date_delete}, username={username}, isSuperAdmin={isSuperAdmin}, position={position_id}, group={group_id}({flag}), user.group={user_group}, organization={organization_id}'.format(
-                i=i, user_id=user_id, username=username, date_delete=date_delete, isSuperAdmin=isSuperAdmin, position_id=position_id,
+                i=i, user_id=user_id, username=username, date_delete=date_delete, isSuperAdmin=isSuperAdmin,
+                position_id=position_id,
                 group_id=group_id, flag=group_flag, user_group=user_group, organization_id=organization_id))
         # print(ep.update_one('users', {'username': username}, {"$set":{'account': account_id, 'group': group_id}}))
 
@@ -170,7 +174,9 @@ def delete_users_by_account_id(ep, account_id, level):
 
 
 def main():
-    epmongo = EPMongo(uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001", db_name='epdb-prod')
+    epmongo = EPMongo(
+        uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
+        db_name='epdb-prod')
     # epmongo = EPMongo()
     parser = argparse.ArgumentParser(prog='clear ep db',
                                      description='clear ep db')

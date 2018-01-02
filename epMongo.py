@@ -52,8 +52,8 @@ class EPMongo(object):
         collection = self.__db[collection_name]
         results = []
         for _i, v in enumerate(collection.find()):
-            #            print 1, type(v), v
-            #            print 2, type(dumps(v)), dumps(v)
+            print(1, type(v), v)
+            print(2, type(dumps(v)), dumps(v))
             results.append(dumps(v))
         return results
 
@@ -65,9 +65,20 @@ class EPMongo(object):
         else:
             return None
 
-    def get_doc_by_query(self, collection_name, query):
+    def get_doc_by_query(self, collection_name, query, projection=None):
         collection = self.__db[collection_name]
-        doc = collection.find_one(query)
+        if projection is None:
+            doc = collection.find_one(query)
+        else:
+            doc = collection.find_one(query, projection)
+        return doc
+
+    def get_docs_by_query(self, collection_name, query, projection=None):
+        collection = self.__db[collection_name]
+        if projection is None:
+            doc = collection.find(query)
+        else:
+            doc = collection.find(query, projection)
         return doc
 
     def get_ids_by_query(self, collection_name, query, key_id):
@@ -94,3 +105,7 @@ class EPMongo(object):
     def update_one(self, collection_name, query, update):
         collection = self.__db[collection_name]
         return collection.update_one(query, update).raw_result
+
+    def aggregate(self, collection_name, pipeline):
+        collection = self.__db[collection_name]
+        return collection.aggregate(pipeline)

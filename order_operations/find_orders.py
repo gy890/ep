@@ -128,15 +128,21 @@ def find_order_by_id(url, order_id, cookie):
 
 
 if __name__ == '__main__':
+    try:
+        from http.client import HTTPConnection  # py3
+    except ImportError:
+        from httplib import HTTPConnection  # py2
+    HTTPConnection.debuglevel = 0
+
     if os.path.exists('mylog.log'):
         os.remove('mylog.log')
     logging.config.fileConfig('logging.conf', defaults={'logfilename': 'mylog.log'})
     logger = logging.getLogger('sLogger')
     print('main', logger)
     logger.info('Start at {}'.format(time.asctime()))
-    url, username, password = get_account('dev', 0)
+    url, username, password = get_account('portal', 1)
     wb = Workbook()
-    ws = wb.get_active_sheet()
+    ws = wb.active
     ws.title = username
     logger.info((url, username, password))
     ws['A1'] = username
