@@ -122,6 +122,7 @@ def find_order_by_id(url, order_id, cookie):
         }
     }
     res = requests.post(url, data=json.dumps(payload), headers=headers)
+    logger.debug(res)
     consigner = (res.json()['response']['consigner']['_id'], res.json()['response']['consigner']['name'])
     consignee = (res.json()['response']['consignee']['_id'], res.json()['response']['consignee']['name'])
     return consigner, consignee

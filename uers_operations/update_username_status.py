@@ -21,5 +21,5 @@ if __name__ == "__main__":
     now = datetime.datetime.utcnow()
     for i, username in enumerate(users, 1):
         logging.debug((i, username))
-        # logging.info(epmongo.update_one("users", {'username': username}, {"$set": {'status': "normal"}}))
-        logging.debug(epmongo.update_one("users", {'username': username}, {"$set": {'dateDelete': now}}))
+        logging.info(epmongo.update_one("users", {'username': username}, {"$set": {'status': "normal"}}))
+        # logging.debug(epmongo.update_one("users", {'username': username}, {"$set": {'dateDelete': now}}))

@@ -1,79 +1,99 @@
-2017-12-29 15:01:14,424 - sLogger - INFO - Start at Fri Dec 29 15:01:14 2017
-2017-12-29 15:01:14,450 - sLogger - DEBUG - get_account costs 0.025 s.
-2017-12-29 15:01:14,451 - sLogger - INFO - ('https://portal.e-ports.com/api/', 'qingdao@e-ports.com', 'QDSky123')
-2017-12-29 15:01:16,515 - sLogger - DEBUG - get_cookie costs 2.062 s.
-2017-12-29 15:01:17,604 - sLogger - DEBUG - get_orders costs 1.089 s.
-2017-12-29 15:01:17,604 - sLogger - INFO - user[qingdao@e-ports.com] role[consignee], total 24 orders
-2017-12-29 15:01:17,604 - sLogger - INFO - No.1 orderNumber=EP0020171214034421840
-2017-12-29 15:01:19,206 - sLogger - DEBUG - find_order_by_id costs 1.602 s.
-2017-12-29 15:01:19,207 - sLogger - INFO - consigner --> ('59e6c619cd108309004a38e1', 'huahuagongsi'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:19,207 - sLogger - INFO - No.2 orderNumber=EP0020171208061734001
-2017-12-29 15:01:21,044 - sLogger - DEBUG - find_order_by_id costs 1.837 s.
-2017-12-29 15:01:21,045 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:21,045 - sLogger - INFO - No.3 orderNumber=EP0020171127070833779
-2017-12-29 15:01:22,707 - sLogger - DEBUG - find_order_by_id costs 1.661 s.
-2017-12-29 15:01:22,707 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:22,708 - sLogger - INFO - No.4 orderNumber=EP0020171124081644106
-2017-12-29 15:01:24,100 - sLogger - DEBUG - find_order_by_id costs 1.392 s.
-2017-12-29 15:01:24,101 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:24,101 - sLogger - INFO - No.5 orderNumber=EP0020171127034530320
-2017-12-29 15:01:26,339 - sLogger - DEBUG - find_order_by_id costs 2.238 s.
-2017-12-29 15:01:26,339 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:26,340 - sLogger - INFO - No.6 orderNumber=EP0020171206050850929
-2017-12-29 15:01:27,895 - sLogger - DEBUG - find_order_by_id costs 1.555 s.
-2017-12-29 15:01:27,896 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:27,896 - sLogger - INFO - No.7 orderNumber=EP0720171122021811656
-2017-12-29 15:01:29,301 - sLogger - DEBUG - find_order_by_id costs 1.405 s.
-2017-12-29 15:01:29,301 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:29,301 - sLogger - INFO - No.8 orderNumber=EP0020171120033046054
-2017-12-29 15:01:30,457 - sLogger - DEBUG - find_order_by_id costs 1.157 s.
-2017-12-29 15:01:30,457 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:30,457 - sLogger - INFO - No.9 orderNumber=EP0020171219091712651
-2017-12-29 15:01:31,805 - sLogger - DEBUG - find_order_by_id costs 1.348 s.
-2017-12-29 15:01:31,805 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:31,805 - sLogger - INFO - No.10 orderNumber=EP0020171115090019260
-2017-12-29 15:01:33,641 - sLogger - DEBUG - find_order_by_id costs 1.835 s.
-2017-12-29 15:01:33,641 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:33,642 - sLogger - INFO - No.11 orderNumber=EP0720171109071852000
-2017-12-29 15:01:35,996 - sLogger - DEBUG - find_order_by_id costs 2.355 s.
-2017-12-29 15:01:35,996 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:35,997 - sLogger - INFO - No.12 orderNumber=EP0020171222065748705
-2017-12-29 15:01:37,374 - sLogger - DEBUG - find_order_by_id costs 1.377 s.
-2017-12-29 15:01:37,374 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:37,374 - sLogger - INFO - No.13 orderNumber=EP0020171222054846251
-2017-12-29 15:01:38,543 - sLogger - DEBUG - find_order_by_id costs 1.168 s.
-2017-12-29 15:01:38,543 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:38,543 - sLogger - INFO - No.14 orderNumber=EP0020171222015125329
-2017-12-29 15:01:39,717 - sLogger - DEBUG - find_order_by_id costs 1.174 s.
-2017-12-29 15:01:39,717 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:39,717 - sLogger - INFO - No.15 orderNumber=EP0020171222032249577
-2017-12-29 15:01:40,715 - sLogger - DEBUG - find_order_by_id costs 0.997 s.
-2017-12-29 15:01:40,715 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:40,715 - sLogger - INFO - No.16 orderNumber=EP0020171220080509811
-2017-12-29 15:01:42,361 - sLogger - DEBUG - find_order_by_id costs 1.646 s.
-2017-12-29 15:01:42,361 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:42,361 - sLogger - INFO - No.17 orderNumber=EP0020171221091215792
-2017-12-29 15:01:44,400 - sLogger - DEBUG - find_order_by_id costs 2.038 s.
-2017-12-29 15:01:44,401 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:44,401 - sLogger - INFO - No.18 orderNumber=EP0020171221054914643
-2017-12-29 15:01:48,998 - sLogger - DEBUG - find_order_by_id costs 4.597 s.
-2017-12-29 15:01:48,999 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:48,999 - sLogger - INFO - No.19 orderNumber=EP0720171109065413076
-2017-12-29 15:01:50,212 - sLogger - DEBUG - find_order_by_id costs 1.213 s.
-2017-12-29 15:01:50,212 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:50,213 - sLogger - INFO - No.20 orderNumber=EP0020171107092944478
-2017-12-29 15:01:51,625 - sLogger - DEBUG - find_order_by_id costs 1.412 s.
-2017-12-29 15:01:51,625 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:51,625 - sLogger - INFO - No.21 orderNumber=EP0020171110060221115
-2017-12-29 15:01:52,968 - sLogger - DEBUG - find_order_by_id costs 1.343 s.
-2017-12-29 15:01:52,968 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:52,968 - sLogger - INFO - No.22 orderNumber=EP0020171221054025723
-2017-12-29 15:01:54,308 - sLogger - DEBUG - find_order_by_id costs 1.340 s.
-2017-12-29 15:01:54,308 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:54,309 - sLogger - INFO - No.23 orderNumber=EP0020171109032722986
-2017-12-29 15:01:56,596 - sLogger - DEBUG - find_order_by_id costs 2.287 s.
-2017-12-29 15:01:56,597 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:56,597 - sLogger - INFO - No.24 orderNumber=EP0420171108022432083
-2017-12-29 15:01:58,795 - sLogger - DEBUG - find_order_by_id costs 2.198 s.
-2017-12-29 15:01:58,795 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
-2017-12-29 15:01:58,808 - sLogger - INFO - End at Fri Dec 29 15:01:58 2017
+2018-01-09 15:24:44,191 - sLogger - INFO - Start at Tue Jan  9 15:24:44 2018
+2018-01-09 15:24:44,219 - sLogger - DEBUG - get_account costs 0.027 s.
+2018-01-09 15:24:44,220 - sLogger - INFO - ('https://portal.e-ports.com/api/', 'qingdao@e-ports.com', 'QDSky123')
+2018-01-09 15:24:46,203 - sLogger - DEBUG - get_cookie costs 1.983 s.
+2018-01-09 15:24:47,401 - sLogger - DEBUG - get_orders costs 1.198 s.
+2018-01-09 15:24:47,401 - sLogger - INFO - user[qingdao@e-ports.com] role[consignee], total 23 orders
+2018-01-09 15:24:47,401 - sLogger - INFO - No.1 orderNumber=EP0020171222065748705
+2018-01-09 15:24:48,655 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:48,656 - sLogger - DEBUG - find_order_by_id costs 1.255 s.
+2018-01-09 15:24:48,657 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:48,657 - sLogger - INFO - No.2 orderNumber=EP0020171222054846251
+2018-01-09 15:24:49,676 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:49,677 - sLogger - DEBUG - find_order_by_id costs 1.020 s.
+2018-01-09 15:24:49,677 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:49,677 - sLogger - INFO - No.3 orderNumber=EP0020171222032249577
+2018-01-09 15:24:50,714 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:50,715 - sLogger - DEBUG - find_order_by_id costs 1.038 s.
+2018-01-09 15:24:50,715 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:50,715 - sLogger - INFO - No.4 orderNumber=EP0020171222015125329
+2018-01-09 15:24:51,959 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:51,960 - sLogger - DEBUG - find_order_by_id costs 1.245 s.
+2018-01-09 15:24:51,960 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:51,960 - sLogger - INFO - No.5 orderNumber=EP0020171221091215792
+2018-01-09 15:24:53,441 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:53,444 - sLogger - DEBUG - find_order_by_id costs 1.484 s.
+2018-01-09 15:24:53,444 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:53,444 - sLogger - INFO - No.6 orderNumber=EP0020171221054914643
+2018-01-09 15:24:55,171 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:55,175 - sLogger - DEBUG - find_order_by_id costs 1.731 s.
+2018-01-09 15:24:55,175 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:55,175 - sLogger - INFO - No.7 orderNumber=EP0020171221054025723
+2018-01-09 15:24:56,801 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:56,803 - sLogger - DEBUG - find_order_by_id costs 1.628 s.
+2018-01-09 15:24:56,803 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:56,803 - sLogger - INFO - No.8 orderNumber=EP0020171220080509811
+2018-01-09 15:24:58,262 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:24:58,265 - sLogger - DEBUG - find_order_by_id costs 1.462 s.
+2018-01-09 15:24:58,265 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:24:58,265 - sLogger - INFO - No.9 orderNumber=EP0020171219091712651
+2018-01-09 15:25:00,015 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:00,017 - sLogger - DEBUG - find_order_by_id costs 1.752 s.
+2018-01-09 15:25:00,018 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:00,018 - sLogger - INFO - No.10 orderNumber=EP0020171208061734001
+2018-01-09 15:25:05,033 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:05,036 - sLogger - DEBUG - find_order_by_id costs 5.018 s.
+2018-01-09 15:25:05,037 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:05,037 - sLogger - INFO - No.11 orderNumber=EP0020171206050850929
+2018-01-09 15:25:07,021 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:07,024 - sLogger - DEBUG - find_order_by_id costs 1.987 s.
+2018-01-09 15:25:07,024 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:07,024 - sLogger - INFO - No.12 orderNumber=EP0020171127070833779
+2018-01-09 15:25:08,952 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:08,955 - sLogger - DEBUG - find_order_by_id costs 1.931 s.
+2018-01-09 15:25:08,955 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:08,956 - sLogger - INFO - No.13 orderNumber=EP0020171127034530320
+2018-01-09 15:25:10,333 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:10,335 - sLogger - DEBUG - find_order_by_id costs 1.379 s.
+2018-01-09 15:25:10,335 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:10,335 - sLogger - INFO - No.14 orderNumber=EP0020171124081644106
+2018-01-09 15:25:11,814 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:11,817 - sLogger - DEBUG - find_order_by_id costs 1.482 s.
+2018-01-09 15:25:11,817 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:11,817 - sLogger - INFO - No.15 orderNumber=EP0720171122021811656
+2018-01-09 15:25:13,547 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:13,550 - sLogger - DEBUG - find_order_by_id costs 1.733 s.
+2018-01-09 15:25:13,550 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:13,550 - sLogger - INFO - No.16 orderNumber=EP0020171120033046054
+2018-01-09 15:25:14,827 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:14,829 - sLogger - DEBUG - find_order_by_id costs 1.279 s.
+2018-01-09 15:25:14,829 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:14,829 - sLogger - INFO - No.17 orderNumber=EP0020171115090019260
+2018-01-09 15:25:16,661 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:16,665 - sLogger - DEBUG - find_order_by_id costs 1.836 s.
+2018-01-09 15:25:16,665 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:16,665 - sLogger - INFO - No.18 orderNumber=EP0020171110060221115
+2018-01-09 15:25:18,134 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:18,136 - sLogger - DEBUG - find_order_by_id costs 1.471 s.
+2018-01-09 15:25:18,136 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:18,136 - sLogger - INFO - No.19 orderNumber=EP0720171109071852000
+2018-01-09 15:25:19,672 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:19,675 - sLogger - DEBUG - find_order_by_id costs 1.539 s.
+2018-01-09 15:25:19,675 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:19,676 - sLogger - INFO - No.20 orderNumber=EP0720171109065413076
+2018-01-09 15:25:21,266 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:21,268 - sLogger - DEBUG - find_order_by_id costs 1.592 s.
+2018-01-09 15:25:21,268 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:21,268 - sLogger - INFO - No.21 orderNumber=EP0020171109032722986
+2018-01-09 15:25:22,609 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:22,611 - sLogger - DEBUG - find_order_by_id costs 1.343 s.
+2018-01-09 15:25:22,611 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:22,611 - sLogger - INFO - No.22 orderNumber=EP0420171108022432083
+2018-01-09 15:25:24,775 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:24,779 - sLogger - DEBUG - find_order_by_id costs 2.168 s.
+2018-01-09 15:25:24,780 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:24,780 - sLogger - INFO - No.23 orderNumber=EP0020171107092944478
+2018-01-09 15:25:26,538 - sLogger - DEBUG - <Response [200]>
+2018-01-09 15:25:26,542 - sLogger - DEBUG - find_order_by_id costs 1.761 s.
+2018-01-09 15:25:26,542 - sLogger - INFO - consigner --> ('59c9f2da7eb7fb0900d43af3', 'E-PORTS Principal'), consignee --> ('59bb7e8516642e0085891029', 'E-Ports Agent')
+2018-01-09 15:25:26,557 - sLogger - INFO - End at Tue Jan  9 15:25:26 2018
