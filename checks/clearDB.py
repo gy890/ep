@@ -174,10 +174,10 @@ def delete_users_by_account_id(ep, account_id, level):
 
 
 def main():
-    epmongo = EPMongo(
-        uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
-        db_name='epdb-prod')
-    # epmongo = EPMongo()
+    # epmongo = EPMongo(
+    #     uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
+    #     db_name='epdb-prod')
+    epmongo = EPMongo()
     parser = argparse.ArgumentParser(prog='clear ep db',
                                      description='clear ep db')
 
