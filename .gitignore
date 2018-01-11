@@ -1,0 +1,13 @@
+__pycache__
+.idea
+
+order_operations/*.log
+order_operations/*.xlsx
+order_operations/__pycache_
+_
+organization_validate/*.xlsx
+
+ports_related/*.xlsx
+
+ships_operations/*.xlsx
+ships_operations/__pycache__
