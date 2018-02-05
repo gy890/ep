@@ -1,13 +1,19 @@
 __pycache__
 .idea
 
+intl_checks/*.xlsx
+
 order_operations/*.log
 order_operations/*.xlsx
-order_operations/__pycache_
-_
+order_operations/__pycache__
+
 organization_validate/*.xlsx
 
 ports_related/*.xlsx
 
 ships_operations/*.xlsx
 ships_operations/__pycache__
+
+transactions/*.xlsx
+
+uers_operations/*.xlsx
