@@ -22,7 +22,7 @@ class PORTS(object):
     def get_ports(self):
         self.ports = self._epmongo.get_docs_by_query('ports', {'dateDelete': {'$exists': False}},
                                                      {'name': 1, 'code': 1, 'country': 1, 'terminals': 1,
-                                                      'shipyards': 1})
+                                                      'shipyards': 1, 'defaultTerminal': 1})
         return self.ports
 
     def _get_country(self, country_id):
@@ -62,6 +62,15 @@ class PORTS(object):
                 shipyard_doc = self._get_shipyard(shipyard_id)
                 shipyards_list.append(shipyard_doc)
             port_dict['shipyards'] = shipyards_list
+
+        default_terminal = port_doc.get('defaultTerminal')
+        if default_terminal:
+            stdb = default_terminal.get('STDB')
+            if stdb:
+                port_dict['STDB'] = self._get_terminal(stdb)
+            stot = default_terminal.get('STOT')
+            if stot:
+                port_dict['STOT'] = self._get_terminal(stot)
         return port_dict
 
 
@@ -87,10 +96,11 @@ if __name__ == '__main__':
     ws.cell(row=1, column=3).value = 'name'
     ws.cell(row=1, column=4).value = 'code'
     ws.cell(row=1, column=5).value = 'country'
-    ws.cell(row=1, column=6).value = 'terminals_number'
-    ws.cell(row=1, column=7).value = 'terminals'
-    ws.cell(row=1, column=8).value = 'shipyards_number'
-    ws.cell(row=1, column=9).value = 'shipyards'
+    ws.cell(row=1, column=6).value = 'default_terminal'
+    ws.cell(row=1, column=7).value = 'terminals_number'
+    ws.cell(row=1, column=8).value = 'terminals'
+    ws.cell(row=1, column=9).value = 'shipyards_number'
+    ws.cell(row=1, column=10).value = 'shipyards'
 
     i = 1
     for each in ports.get_ports():
@@ -102,15 +112,32 @@ if __name__ == '__main__':
         ws.cell(row=i + 1, column=4).value = port_dict.get('code')
         ws.cell(row=i + 1, column=5).value = port_dict.get('country')
 
+        stdb = port_dict.get('STDB')
+        stot = port_dict.get('STOT')
+        if stdb:
+            stdb = ','.join((str(stdb.get('_id')), stdb.get('name')))
+            stdb = 'STDB:{}'.format(stdb)
+        else:
+            stdb = ''
+        if stot:
+            stot = ','.join((str(stot.get('_id')), stot.get('name')))
+            stot = 'STOT:{}'.format(stot)
+        else:
+            stot = ''
+        default_terminal = ('\n'.join((stdb, stot))).strip()
+        if default_terminal.count('S') > 0:
+            logging.debug('----------------')
+            ws.cell(row=i + 1, column=6).value = default_terminal
+
         terminals_list = port_dict.get('terminals')
         if terminals_list is not None:
-            ws.cell(row=i + 1, column=6).value = len(terminals_list)
-            ws.cell(row=i + 1, column=7).value = '\n'.join(convert_to_string(terminals_list))
+            ws.cell(row=i + 1, column=7).value = len(terminals_list)
+            ws.cell(row=i + 1, column=8).value = '\n'.join(convert_to_string(terminals_list))
 
         shipyards_list = port_dict.get('shipyards')
         if shipyards_list is not None:
-            ws.cell(row=i + 1, column=8).value = len(shipyards_list)
-            ws.cell(row=i + 1, column=9).value = '\n'.join(convert_to_string(shipyards_list))
+            ws.cell(row=i + 1, column=9).value = len(shipyards_list)
+            ws.cell(row=i + 1, column=10).value = '\n'.join(convert_to_string(shipyards_list))
 
         i = i + 1
     wb.save('ports.xlsx')
