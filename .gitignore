@@ -11,6 +11,8 @@ organization_validate/*.xlsx
 
 ports_related/*.xlsx
 
+products/*.xlsx
+
 ships_operations/*.xlsx
 ships_operations/__pycache__
 
