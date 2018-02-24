@@ -8,6 +8,7 @@ Created on 2017-12-19
 
 """
 import time
+from functools import wraps
 import logging
 
 logger = logging.getLogger('sLogger')
@@ -15,6 +16,7 @@ print('timeit', logger)
 
 
 def timeit(func):
+    @wraps(func)
     def wrapped(*args, **kwargs):
         t1 = time.time()
         result = func(*args, **kwargs)

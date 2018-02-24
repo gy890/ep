@@ -8,4 +8,6 @@ Created on 2017-07-17
 
 """
 from git import Repo
-join = osp.join
+from functools import partial
+from functools import reduce
+

@@ -7,6 +7,7 @@ Created on 2018-01-18
 
 
 """
+import sys
 import datetime
 import logging
 import collections
@@ -21,6 +22,8 @@ def generate_params(order_type=1):
     读取委托方账号，代理方账号，订单参数
     :return: consigner, consignee, order_params
     """
+    if order_type not in [1, 2, 3]:
+        sys.exit('order_type must be in [1, 2, 3].')
     from yaml import load
     try:
         from yaml import CLoader as Loader
@@ -175,7 +178,7 @@ def set_order_quotation(url, inquiry_order_id, order_id, cookie):
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s: %(message)s')
-    url, consigner, consignee, order_param, agent_params = generate_params(order_type=3)
+    url, consigner, consignee, order_param, agent_params = generate_params(order_type=1)
     cookie = get_cookie(url, consigner)
     logging.info('--> Consigner[%s] logined' % consigner['username'])
     order_id = add_inquiry_orders(url, order_param, cookie)['response']['entries'][0]

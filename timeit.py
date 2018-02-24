@@ -7,6 +7,7 @@ Created on 2017-12-19
 
 
 """
+from functools import wraps
 import time
 import logging
 
@@ -15,6 +16,7 @@ logger = logging.basicConfig(level=logging.DEBUG,
 
 
 def timeit(func):
+    @wraps(func)
     def wrapped(*args, **kwargs):
         t1 = time.time()
         result = func(*args, **kwargs)

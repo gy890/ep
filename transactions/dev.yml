@@ -16,9 +16,9 @@ consignee:
     account: 5a1bd30999c71b0900f9665b
 
 ships:
-  - name: shipTest.20180124001
-    _id: 5a684be9b68fff08008e793c
-    imo: 0124001
+  - name: shipTest.20180209001
+    _id: 5a7d405d43a53907008f152c
+    imo: 0209001
 
 ports:
   - name: ShangHai
