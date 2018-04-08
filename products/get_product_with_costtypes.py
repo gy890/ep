@@ -1,11 +1,8 @@
 # coding=utf-8
 """
 Created on 2018-02-07
-
 @Filename: get_products_with_costtypes
 @Author: Gui
-
-
 """
 from collections import OrderedDict
 from openpyxl import Workbook
@@ -51,6 +48,7 @@ def generate_pipeline():
                 "index": 1,
                 "tags": 1,
                 "parent": 1,
+                "isNew": 1,
                 "costTypeId": "$costTypes.costType._id",
                 "costTypeName": "$costTypes.costType.name",
                 "costTypeCode": "$costTypes.costType.code",
@@ -65,7 +63,7 @@ def generate_pipeline():
         {
             "$group": {
                 "_id": {"_id": "$_id", "code": "$code", "name": "$name", "index": "$index", "tags": "$tags",
-                        "parent": "$parent"},
+                        "parent": "$parent", "isNew": "$isNew"},
                 "costTypes": {
                     "$addToSet": {
                         "costTypeId": "$costTypeId",
@@ -93,20 +91,20 @@ def generate_pipeline():
 
 
 def get_results():
-    # epmongo = EPMongo()
-    epmongo = EPMongo(
-        uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
-        db_name='epdb-prod')
+    epmongo = EPMongo()
+    # epmongo = EPMongo(
+    #     uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
+    #     db_name='epdb-prod')
     pipeline = generate_pipeline()
     results = epmongo.aggregate('products', pipeline)
     return results
 
 
 def get_order_types():
-    # epmongo = EPMongo()
-    epmongo = EPMongo(
-        uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
-        db_name='epdb-prod')
+    epmongo = EPMongo()
+    # epmongo = EPMongo(
+    #     uri="mongodb://root:gEUMooTG0d%23pd1%24YX@172.16.100.1:30001,172.16.100.11:30001,172.16.120.30:30001",
+    #     db_name='epdb-prod')
     docs = epmongo.get_docs_by_query('ordertypes', {'dateDelete': {'$exists': False}}, {'name': 1, 'code': 1})
     order_types = {}
     for doc in docs:
@@ -129,13 +127,14 @@ def main():
     ws.cell(row=1, column=6).value = 'index'
     ws.cell(row=1, column=7).value = 'tags'
     ws.cell(row=1, column=8).value = 'total'
-    ws.cell(row=1, column=9).value = 'costTypeId'
-    ws.cell(row=1, column=10).value = 'costTypeName'
-    ws.cell(row=1, column=11).value = 'costTypeCode'
-    ws.cell(row=1, column=12).value = 'costTypeIndex'
-    ws.cell(row=1, column=13).value = 'defaultVisiable'
-    ws.cell(row=1, column=14).value = 'isEditable'
-    ws.cell(row=1, column=15).value = 'costTypeTags:isVisible'
+    ws.cell(row=1, column=9).value = 'isNew'
+    ws.cell(row=1, column=10).value = 'costTypeId'
+    ws.cell(row=1, column=11).value = 'costTypeName'
+    ws.cell(row=1, column=12).value = 'costTypeCode'
+    ws.cell(row=1, column=13).value = 'costTypeIndex'
+    ws.cell(row=1, column=14).value = 'defaultVisiable'
+    ws.cell(row=1, column=15).value = 'isEditable'
+    ws.cell(row=1, column=16).value = 'costTypeTags:isVisible'
     n = 1
     for i, doc in enumerate(results, 1):
         merge_start = n + 1
@@ -146,25 +145,29 @@ def main():
         ws.cell(row=n + 1, column=5).value = str(doc.get('_id').get('parent', ''))
         ws.cell(row=n + 1, column=6).value = doc.get('_id').get('index')
         tags = doc.get('_id').get('tags')
-        tags = ('\n'.join([tag.get('value', '') for tag in tags])).strip()
+        # tags = ('\n'.join([tag.get('value', '') for tag in tags])).strip()
+        tags = ('\n'.join([': '.join([tag.get('value', ''), order_types.get(tag.get('value', ''), '')]) for tag in tags])).strip()
         ws.cell(row=n + 1, column=7).value = tags
         ws.cell(row=n + 1, column=8).value = doc.get('total')
+        ws.cell(row=n + 1, column=9).value = doc.get('_id').get('isNew')
 
         cost_types = doc.get('costTypes')
         if cost_types != [{}]:
             cts = sorted(cost_types, key=lambda x: x['costTypeIndex'])
             for ct in cts:
-                ws.cell(row=n + 1, column=9).value = str(ct.get('costTypeId'))
-                ws.cell(row=n + 1, column=10).value = ct.get('costTypeName')
-                ws.cell(row=n + 1, column=11).value = ct.get('costTypeCode')
-                ws.cell(row=n + 1, column=12).value = ct.get('costTypeIndex')
-                ws.cell(row=n + 1, column=13).value = ct.get('defaultVisiable')
-                ws.cell(row=n + 1, column=14).value = ct.get('isEditable')
+                ws.cell(row=n + 1, column=10).value = str(ct.get('costTypeId', ''))
+                ws.cell(row=n + 1, column=11).value = ct.get('costTypeName', '')
+                ws.cell(row=n + 1, column=12).value = ct.get('costTypeCode', '')
+                ws.cell(row=n + 1, column=13).value = ct.get('costTypeIndex', '')
+                ws.cell(row=n + 1, column=14).value = ct.get('defaultVisiable', '')
+                ws.cell(row=n + 1, column=15).value = ct.get('isEditable', '')
+                ws.cell(row=n + 1, column=16).value = ct.get('isEditable', '')
                 tags = ct.get('costTypeTags')
                 if tags:
-                    tags = ['{}:{}'.format(order_types.get(tag.get('orderTypeCode', '')), tag.get('isVisible', '')) for tag in tags if
+                    tags = ['{}:{}'.format(order_types.get(tag.get('orderTypeCode', '')), tag.get('isVisible', '')) for
+                            tag in tags if
                             order_types.get(tag.get('orderTypeCode', ''))]
-                    ws.cell(row=n + 1, column=15).value = ('\n'.join(tags)).strip()
+                    ws.cell(row=n + 1, column=17).value = ('\n'.join(tags)).strip()
                 n = n + 1
             merge_end = n
             ws.merge_cells(start_row=merge_start, start_column=1, end_row=merge_end, end_column=1)
@@ -175,6 +178,7 @@ def main():
             ws.merge_cells(start_row=merge_start, start_column=6, end_row=merge_end, end_column=6)
             ws.merge_cells(start_row=merge_start, start_column=7, end_row=merge_end, end_column=7)
             ws.merge_cells(start_row=merge_start, start_column=8, end_row=merge_end, end_column=8)
+            ws.merge_cells(start_row=merge_start, start_column=9, end_row=merge_end, end_column=9)
         else:
             n = n + 1
     wb.save('products.xlsx')

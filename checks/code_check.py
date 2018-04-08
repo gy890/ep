@@ -22,19 +22,36 @@ class GitCheck(object):
             "D:\e-ports\ep-svc-message", "D:\e-ports\ep-svc-order", "D:\e-ports\ep-svc-public",
             "D:\e-ports\ep-svc-session", "D:\e-ports\ep-svc-storage", "D:\e-ports\ep-svc-user",
             "D:\e-ports\epmodel", "D:\e-ports\epmsg-helper", "D:\e-ports\epui-intl", "D:\e-ports\epui-md",
-            "D:\PycharmProjects\ep",
+            # "D:\PycharmProjects\ep",
             ]
 
-    cmd = 'git status '
+    cmd1 = 'git fetch'
+    cmd2 = 'git status '
+    cmd3 = 'git pull '
 
     def __init__(self):
         for _, path in enumerate(GitCheck.path, 1):
-            p = subprocess.Popen(GitCheck.cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=path)
+            subprocess.Popen(GitCheck.cmd1, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=path)
+            p = subprocess.Popen(GitCheck.cmd2, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=path)
             (std, err) = p.communicate()
-            std = std.decode('gbk')
-            if 'up-to-date' not in std:
+            std = std.decode('utf-8')
+            if 'behind' in std or 'Changes not staged for commit' in std or 'Untracked files' in std or 'Changes to be committed' in std:
                 logging.debug('-------------------------------------------')
-                logging.debug('{path} {std}'.format(path=path, std=std))
+
+                # if 'behind' in std:
+                #     n = std.split('by')[1].split('commit')[0].strip()
+                #
+                #     cmd4 = 'git log -{}'.format(n)
+                #     p = subprocess.Popen(cmd4, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                #                          cwd=path)
+                #     (std, err) = p.communicate()
+                #     std = std.decode('utf-8')
+
+                logging.debug('{path}\n{std}'.format(path=path, std=std))
+
+                subprocess.Popen(GitCheck.cmd3, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                 cwd=path)
+
                 logging.debug('-------------------------------------------')
 
 
