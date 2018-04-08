@@ -63,7 +63,7 @@ def generate_pipeline(user_id):
 if __name__ == '__main__':
     epmongo = EPMongo()
     users = epmongo.get_docs_by_query('users', query=None, projection={'_id': 1})
-    # print(users.count(), users[0])
+    # print(c, users[0])
     # pipeline = generate_pipeline(users[0]['_id'])
     # docs = epmongo.aggregate('users', pipeline)
     # print(docs)
