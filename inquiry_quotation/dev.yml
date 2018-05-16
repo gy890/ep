@@ -1,0 +1,74 @@
+url: http://dev.e-ports.com/api/
+
+consigner:
+  - username: gui.yun@e-ports.com
+    password: password
+    account: 5a1bce0899c71b0900f9665a
+    account_name: orgOwnerTest.20171117001.a
+
+consignee:
+  - username: ee890119a@163.com
+    password: password
+    account: 5a1bd30999c71b0900f9665b
+    account_name: orgAgentTest.20171127002.b
+  - username: 878248393@qq.com
+    password: password
+    account: 5a1bd30999c71b0900f9665b
+
+ships:
+  - name: shipTest.20180209001
+    _id: 5a7d405d43a53907008f152c
+    imo: 0209001
+
+ports:
+  - name: ShangHai
+    id: 57ba95ba18c0b10af8988e85
+    terminals:
+      57ba95ba18c0b10af8988e8f: Luojing Bulk terminal
+      57ba95ba18c0b10af8988e91: Waigaoqiao liangyou terminal
+      57ba95ba18c0b10af8988e8d: Luojing coal terminal
+      585b43b08061bd0800bbbd6d: Luojing general cargo terminal
+      585b44248061bd0800bbbd78: Baoshan
+      585b44498061bd0800bbbd7a: Zhanghuabang
+      585b44778061bd0800bbbd7c: Lvhuashan
+      585b44a38061bd0800bbbd7f: Shidongkou
+      585b44c58061bd0800bbbd81: Caojing
+    shipyards:
+      59e84041f178e9016ce47d4d: Hudong Shipyard
+      59e84041f178e9016ce47d4e: Waigaoqiao shipyard(SWS)
+      59e84041f178e9016ce47d4f: Jiangnan Changxing Shipyard
+      59e84041f178e9016ce47d50: CIC Changxing Shipyard
+      59e84041f178e9016ce47d51: Huarun Dadong Shipyard(HRDD)
+      59e84041f178e9016ce47d52: Shanghai Shipyard
+
+ordertypes:
+  - name: Newbuilding
+    id: 56652246d4c6815fc8ef7e95
+    PTOF: true
+  - name: Drydocking
+    id: 56652246d4c6815fc8ef7e94
+    PTIF: true
+    PTOF: true
+  - name: Protecting Agency - Discharging
+    id: 56652246d4c6815fc8ef7e90
+
+products:
+  PTOF: true
+  PTIF: true
+  PTCPD: false
+  PTOL: true
+  PTACVAHK: true
+  PTAGMINPECN: false
+  PTCC: false
+  PTCTM: true
+  PTCVD: false
+  PTOLFVSL: true
+  PTOMREQ: false
+  PTPSCIA: false
+  PTRSCC: true
+  PTSP: false
+  PTSPSLGA: false
+  PTSV: false
+  PTTSA: false
+  Custome_1: other1
+  Custome_2: other2
