@@ -13,7 +13,7 @@ def generate_pipeline():
     pipeline = [
         {
             "$match": {
-                "dateDelete": {"$exists": False},
+                "dateDelete": {"$exists": False}, 'isNew': True,
             }
         },
 
@@ -146,7 +146,8 @@ def main():
         ws.cell(row=n + 1, column=6).value = doc.get('_id').get('index')
         tags = doc.get('_id').get('tags')
         # tags = ('\n'.join([tag.get('value', '') for tag in tags])).strip()
-        tags = ('\n'.join([': '.join([tag.get('value', ''), order_types.get(tag.get('value', ''), '')]) for tag in tags])).strip()
+        tags = ('\n'.join(
+            [': '.join([tag.get('value', ''), order_types.get(tag.get('value', ''), '')]) for tag in tags])).strip()
         ws.cell(row=n + 1, column=7).value = tags
         ws.cell(row=n + 1, column=8).value = doc.get('total')
         ws.cell(row=n + 1, column=9).value = doc.get('_id').get('isNew')

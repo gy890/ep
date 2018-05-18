@@ -8,8 +8,8 @@ Created on 2018-05-02
 
 """
 
-SHIP = {"_id": "5af95fd59bdbca0800f6dd90", "name": "shipTest.20180514002", "imo": "0514002"}
-# SHIP = {"_id": "5af95f5c9bdbca0800f6dd8e", "name": "shipTest.20180514001_STGC", "imo": "0514001"}
+# SHIP = {"_id": "5af95fd59bdbca0800f6dd90", "name": "shipTest.20180514002", "imo": "0514002"}
+SHIP = {"_id": "5af95f5c9bdbca0800f6dd8e", "name": "shipTest.20180514001_STGC", "imo": "0514001"}
 
 SHANGHAI = {"_id": "57ba95ba18c0b10af8988e85"}
 TERMINALS = ["57ba95ba18c0b10af8988e8f",

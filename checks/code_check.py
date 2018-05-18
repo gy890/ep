@@ -44,6 +44,7 @@ class GitCheck(object):
                 #     cmd4 = 'git log -{}'.format(n)
                 #     p = subprocess.Popen(cmd4, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 #                          cwd=path)
+
                 #     (std, err) = p.communicate()
                 #     std = std.decode('utf-8')
 

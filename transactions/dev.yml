@@ -55,7 +55,7 @@ ordertypes:
 products:
   PTOF: true
   PTIF: true
-  PTCPD: true
+  PTCPD: false
   PTOL: true
   PTACVAHK: true
   PTAGMINPECN: false

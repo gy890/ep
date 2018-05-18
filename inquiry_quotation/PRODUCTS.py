@@ -50,7 +50,7 @@ PRODUCTS_CONFIG = {
          "oWidth": 5.66, "oHeight": 3.22},
         {"_id": 1, "status": "Overseas spare parts", "content": "", "oNumber": "", "oWeight": "", "oLength": "",
          "oWidth": "",
-         "oHeight": ""}], "requires": "", "isComplete": False},
+         "oHeight": ""}], "requires": requires, "isComplete": False},
     "PTSPRO": {"requires": requires, "isComplete": True},
     "PTSVBKDV": {"requires": requires, "isComplete": True},
     "PTBKQASV": {"requires": requires, "isComplete": True},
@@ -62,7 +62,7 @@ PRODUCTS_CONFIG = {
     "PTONHBKSV": {"survey": 10, "requires": requires, "isComplete": True},
     "PTTSA": {"OriginalLetter": "Yes", "numberOfPeople": 11, "letters": 12, "requires": requires,
               "isComplete": True},
-    "PTOT": {"customName": None, "requires": requires, "isComplete": True, "serviceName": None},
+    "PTOT": {"customName": None, "requires": "", "isComplete": True, "serviceName": None},
 }
 
 PTOT2 = {"customName": "my name is others", "requires": requires, "isComplete": True, "serviceName": None,

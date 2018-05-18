@@ -465,32 +465,32 @@ def main():
     order_id = res['response']['_id']
     ship_type = res['response']['ship']['type']
 
-    # logging.info('--> addOrderEntryAndConfigToOrder...')
-    # products = _omit_product(order_type)
-    # for k, v in products.items():
-    #     data = generate_add_order_entry_and_config_to_order(order_type, ship_type, order_id, k, v)
-    #     logging.info('Add service {{{}}}'.format(k))
-    #     add_order_entry_and_config_to_order(consigner_cookie, data).json()
+    logging.info('--> addOrderEntryAndConfigToOrder...')
+    products = _omit_product(order_type)
+    for k, v in products.items():
+        data = generate_add_order_entry_and_config_to_order(order_type, ship_type, order_id, k, v)
+        logging.info('Add service {{{}}}'.format(k))
+        add_order_entry_and_config_to_order(consigner_cookie, data).json()
 
     add_real_inquiry_order_params = generate_add_real_inquiry_order_params(order_type, order_id)
     add_real_inquiry_order(consigner_cookie, add_real_inquiry_order_params)
 
     # input('Press any key to continue')
 
-    logging.info('--> updateProductConfig...')
-    res = find_order_by_id({'id': order_id}).json()
-    order_v = res['response']['__v']
-    for i, entry in enumerate(res['response']['orderEntries'], 1):
-        product_config_id = entry['productConfig']['_id']
-        product_code = entry['product']['code']
-        entry_id = entry['_id']
-        entry_v = entry['__v']
-        if product_code != 'PTAGT':
-            product_config = generate_product_config(order_type, ship_type, entry_id, entry_v, order_id, order_v,
-                                                     product_config_id, product_code)
-            logging.info('Update service {{{}}}'.format(product_code))
-            res = update_product_config(consigner_cookie, product_config).json()
-            order_v = res['response']['__v']
+    # logging.info('--> updateProductConfig...')
+    # res = find_order_by_id({'id': order_id}).json()
+    # order_v = res['response']['__v']
+    # for i, entry in enumerate(res['response']['orderEntries'], 1):
+    #     product_config_id = entry['productConfig']['_id']
+    #     product_code = entry['product']['code']
+    #     entry_id = entry['_id']
+    #     entry_v = entry['__v']
+    #     if product_code != 'PTAGT':
+    #         product_config = generate_product_config(order_type, ship_type, entry_id, entry_v, order_id, order_v,
+    #                                                  product_config_id, product_code)
+    #         logging.info('Update service {{{}}}'.format(product_code))
+    #         res = update_product_config(consigner_cookie, product_config).json()
+    #         order_v = res['response']['__v']
 
     # input('Press any key to continue')
 
