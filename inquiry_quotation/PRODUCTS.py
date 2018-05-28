@@ -67,3 +67,19 @@ PRODUCTS_CONFIG = {
 
 PTOT2 = {"customName": "my name is others", "requires": requires, "isComplete": True, "serviceName": None,
          "productCode": "PTOT"}
+
+ALL_PRODUCTS = {'PTSPRO': 'SPRO', 'PTSLUDGE': 'Sludge', 'PTGABAGE': 'Garbage', 'PTOL': 'Port Captain',
+                'PTOT': 'Customized Service', 'PTAGMINPECN': 'AGM Inspection', 'PTFRWKPMT': 'Hot Work Permit',
+                'PTMEIMBIN': 'Main Engine Immobilization', 'PTFWSPY': 'Fresh Water Supply',
+                'PTFHWTANAS': 'Water Sample Analysis', 'PTMACMADJST': 'Magnetic Compass Adjust',
+                'PTACVAHK': 'Apply Visa at HongKong', 'PTHLTHCC': 'Renew Certificate - Health',
+                'PTSSCEC': 'Renew Certificate - Ship Sanitation Control Exempt', 'PTOLFVSL': 'Off Land',
+                'PTYLLOWCC': 'Renew Certificate - Vaccination', 'PTCVD': 'Medical Service', 'PTCTM': 'Cash To Master',
+                'PTSP': 'Spare Part Delivery', 'PTTSA': 'Technicians/ Superintendent Attendance',
+                'PTCCONS': 'Crew Change On Signer', 'PTCCOFFS': 'Crew Change Off Signer',
+                'PTPSCIA': 'PSC Inspection Assistance', 'PTIF': 'Inward Formality', 'PTOF': 'Outward Formality',
+                'PTBWD': 'Bilge Water', 'PTAGT': 'Port Agency Fee', 'PTSVBKDV': 'Survey - Bunker Delivery',
+                'PTSVCGOT': 'Survey - Cargo Operation', 'PTRSCAC': 'Renew Certificate - Ship Certificate At Consulate',
+                'PTOFFHBKCDSV': 'Survey - Off Hire B+C', 'PTBKQASV': 'Survey - Bunker Quantity',
+                'PTONHBKSV': 'Survey - On Hire Bunker', 'PTOFFHBKSV': 'Survey - Off Hire Bunker',
+                'PTONHBKCDSV': 'Survey - On Hire B+C', 'PTDRAFTSV': 'Survey - Draft'}

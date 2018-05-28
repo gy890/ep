@@ -124,7 +124,9 @@ def generate_add_order_entry_and_config_to_order(order_type, ship_type, order_id
         else:
             config.pop('cargoType')
             config.pop('cargoVolume')
-    request_params = {"id": order_id, "product": k, "config": config}
+    # "product": {"code": "PTCCOFFS", "name": "Crew Change Off Signer"} 之前是string，现在是object
+    product = {'code': k, 'name': PRODUCTS.ALL_PRODUCTS.get(k)}
+    request_params = {"id": order_id, "product": product, "config": config}
     return request_params
 
 
@@ -439,8 +441,8 @@ def appointment_agent(cookie, data):
 
 
 def main():
-    # order_type = 'OTBK'
-    order_type = 'OTCD'
+    order_type = 'OTBK'
+    # order_type = 'OTCD'
     # order_type = 'OTPCD'
     # order_type = 'OTOPA'
 
@@ -477,26 +479,28 @@ def main():
 
     # input('Press any key to continue')
 
-    # logging.info('--> updateProductConfig...')
-    # res = find_order_by_id({'id': order_id}).json()
-    # order_v = res['response']['__v']
-    # for i, entry in enumerate(res['response']['orderEntries'], 1):
-    #     product_config_id = entry['productConfig']['_id']
-    #     product_code = entry['product']['code']
-    #     entry_id = entry['_id']
-    #     entry_v = entry['__v']
-    #     if product_code != 'PTAGT':
-    #         product_config = generate_product_config(order_type, ship_type, entry_id, entry_v, order_id, order_v,
-    #                                                  product_config_id, product_code)
-    #         logging.info('Update service {{{}}}'.format(product_code))
-    #         res = update_product_config(consigner_cookie, product_config).json()
-    #         order_v = res['response']['__v']
+    logging.info('--> updateProductConfig...')
+    res = find_order_by_id({'id': order_id}).json()
+    order_v = res['response']['__v']
+    for i, entry in enumerate(res['response']['orderEntries'], 1):
+        product_config_id = entry['productConfig']['_id']
+        product_code = entry['product']['code']
+        entry_id = entry['_id']
+        entry_v = entry['__v']
+        if product_code != 'PTAGT':
+            product_config = generate_product_config(order_type, ship_type, entry_id, entry_v, order_id, order_v,
+                                                     product_config_id, product_code)
+            logging.info('Update service {{{}}}'.format(product_code))
+            res = update_product_config(consigner_cookie, product_config).json()
+            order_v = res['response']['__v']
 
     # input('Press any key to continue')
 
     logging.info('--> createInquiryOrders...')
     create_inquiry_orders_params = generate_create_inquiry_orders_params(order_id)
     create_inquiry_orders(consigner_cookie, create_inquiry_orders_params)
+
+    # input('Press any key to continue')
 
     inquiry_order_id = get_inquiry_order(consigner_cookie, order_id)  # 获取inquiryOrder._id
 
@@ -521,7 +525,7 @@ def main():
     logging.info('--> setOrderQuotation...')
     set_order_quotation(consignee_cookie, {"id": inquiry_order_id, "orderId": order_id})
 
-    # input('Press any key to continue')
+    input('Press any key to continue')
 
     logging.info('--> appointmentAgent...')
     res = find_inquiry_order_by_id(consigner_cookie, {'id': inquiry_order_id}).json()
