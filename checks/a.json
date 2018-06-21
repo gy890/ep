@@ -1,0 +1,146 @@
+[
+	{
+		"code": "PTSPRO",
+		"name": "SPRO"
+	},
+	{
+		"code": "PTSLUDGE",
+		"name": "Sludge"
+	},
+	{
+		"code": "PTGABAGE",
+		"name": "Garbage"
+	},
+	{
+		"code": "PTOL",
+		"name": "Port Captain"
+	},
+	{
+		"code": "PTOT",
+		"name": "Customized Service"
+	},
+	{
+		"code": "PTAGMINPECN",
+		"name": "AGM Inspection"
+	},
+	{
+		"code": "PTFRWKPMT",
+		"name": "Hot Work Permit"
+	},
+	{
+		"code": "PTMEIMBIN",
+		"name": "Main Engine Immobilization"
+	},
+	{
+		"code": "PTFWSPY",
+		"name": "Fresh Water Supply"
+	},
+	{
+		"code": "PTFHWTANAS",
+		"name": "Water Sample Analysis"
+	},
+	{
+		"code": "PTMACMADJST",
+		"name": "Magnetic Compass Adjust"
+	},
+	{
+		"code": "PTACVAHK",
+		"name": "Apply Visa at HongKong"
+	},
+	{
+		"code": "PTHLTHCC",
+		"name": "Renew Certificate - Health"
+	},
+	{
+		"code": "PTSSCEC",
+		"name": "Renew Certificate - Ship Sanitation Control Exempt"
+	},
+	{
+		"code": "PTOLFVSL",
+		"name": "Off Land"
+	},
+	{
+		"code": "PTYLLOWCC",
+		"name": "Renew Certificate - Vaccination"
+	},
+	{
+		"code": "PTCVD",
+		"name": "Medical Service"
+	},
+	{
+		"code": "PTCTM",
+		"name": "Cash To Master"
+	},
+	{
+		"code": "PTSP",
+		"name": "Spare Part Delivery"
+	},
+	{
+		"code": "PTTSA",
+		"name": "Technicians/ Superintendent Attendance"
+	},
+	{
+		"code": "PTCCONS",
+		"name": "Crew Change On Signer"
+	},
+	{
+		"code": "PTCCOFFS",
+		"name": "Crew Change Off Signer"
+	},
+	{
+		"code": "PTPSCIA",
+		"name": "PSC Inspection Assistance"
+	},
+	{
+		"code": "PTIF",
+		"name": "Inward Formality"
+	},
+	{
+		"code": "PTOF",
+		"name": "Outward Formality"
+	},
+	{
+		"code": "PTBWD",
+		"name": "Bilge Water"
+	},
+	{
+		"code": "PTAGT",
+		"name": "Port Agency Fee"
+	},
+	{
+		"code": "PTSVBKDV",
+		"name": "Survey - Bunker Delivery"
+	},
+	{
+		"code": "PTSVCGOT",
+		"name": "Survey - Cargo Operation"
+	},
+	{
+		"code": "PTRSCAC",
+		"name": "Renew Certificate - Ship Certificate At Consulate"
+	},
+	{
+		"code": "PTOFFHBKCDSV",
+		"name": "Survey - Off Hire B+C"
+	},
+	{
+		"code": "PTBKQASV",
+		"name": "Survey - Bunker Quantity"
+	},
+	{
+		"code": "PTONHBKSV",
+		"name": "Survey - On Hire Bunker"
+	},
+	{
+		"code": "PTOFFHBKSV",
+		"name": "Survey - Off Hire Bunker"
+	},
+	{
+		"code": "PTONHBKCDSV",
+		"name": "Survey - On Hire B+C"
+	},
+	{
+		"code": "PTDRAFTSV",
+		"name": "Survey - Draft"
+	}
+]
